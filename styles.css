@@ -14,20 +14,12 @@ form{
 text-align: center;
 }
 
-table{
-    border: 1px;
-    border-color: rgb(243, 7, 7);
-}
 
 .box{
     text-align: center;
 }
 
-.btn\ waves-effect\ waves-light{
-    border-radius: 10px;
-    box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.5);
-    background-color: blue;
-}
+
 
 
 
