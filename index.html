@@ -14,45 +14,66 @@
 
 <body>
 
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate" required name="nombre">
-                    <label for="icon_prefix">Nombre(s)</label>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" type="text" class="validate" required name="ap_paterno">
-                        <label for="icon_prefix">Apellido paterno</label>
-                    </div>
-                    <div class="row">
+    <div class="box">
+        <form class="col s12" action="" method="">
+
+            <table rules="rows">
+                <tr>
+                    <td>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="text" class="validate" required name="nombre">
+                            <label for="icon_prefix">Nombre(s)</label>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="text" class="validate" required name="ap_paterno">
+                            <label for="icon_prefix">Apellido paterno</label>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
                             <input id="icon_prefix" type="text" class="validate" required name="ap_materno">
                             <label for="icon_prefix">Apellido materno</label>
                         </div>
-
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">mail</i>
-                                <input id="icon_prefix" type="email" class="validate" required name="email">
-                                <label for="icon_prefix">Email</label>
-                            </div>
-
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">phone</i>
-                                <input id="icon_telephone" type="number" class="validate" required name="celular">
-                                <label for="icon_telephone">Celular</label>
-                            </div>
+                    </td>
+                    <td>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="icon_prefix" type="email" class="validate" required name="email">
+                            <label for="icon_prefix">Email</label>
                         </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="icon_telephone" type="number" class="validate" required name="celular">
+                            <label for="icon_telephone">Celular</label>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </table>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                <i class="material-icons right">send</i>
+            </button>
+
         </form>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-            <i class="material-icons right">send</i>
-          </button>
+
     </div>
 
 
