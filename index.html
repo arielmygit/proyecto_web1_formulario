@@ -10,23 +10,74 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-<div class='ripple-background'>
-  <div class='circle xxlarge shade1'></div>
-  <div class='circle xlarge shade2'></div>
-  <div class='circle large shade3'></div>
-  <div class='circle mediun shade4'></div>
-  <div class='circle small shade5'></div>
-</div>
+    <div class='ripple-background'>
+        <div class='circle xxlarge shade1'></div>
+        <div class='circle xlarge shade2'></div>
+        <div class='circle large shade3'></div>
+        <div class='circle mediun shade4'></div>
+        <div class='circle small shade5'></div>
+    </div>
+
+
+
+
+    <div class="slider z-depth-5">
+        <ul class="slides">
+            <li>
+                <img src="media/banner 2.png"> 
+                <div class="caption center-align">
+                </div>
+            </li>
+            <li>
+                <img src="media/banner 1.png"> 
+                <div class="caption left-align">
+                </div>
+            </li>
+            <li>
+                <img src="media/banner 3.png"> 
+                <div class="caption left-align">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, {}); // opciones vacías por ahora
+
+            var instance = M.Slider.getInstance(elems[0]);
+            instance.start();
+            instance.pause();
+            instance.next();
+            instance.prev();
+            
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, options);
+        });
+
+        var instance = M.Slider.getInstance(elem);
+        instance.start();
+        instance.pause();
+        instance.next();
+        instance.prev();
+    </script>
 
 
 
 
 
 
-<h1>Formulario de registro</h1>
     <div class="box">
         <form class="col s12 z-depth-5 white" action="" method="">
 
@@ -80,7 +131,8 @@
 
             </table>
 
-            <button class="btn waves-effect waves-light blue darken-4 z-depth-3" type="submit" name="action">Enviar
+            <button class="btn waves-effect waves-light blue darken-4 z-depth-3" type="submit" name="action"
+                maxlength="10">Enviar
                 <i class="material-icons right">send</i>
             </button>
 
@@ -100,7 +152,9 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
+
+
+
 </body>
 
 </html>
