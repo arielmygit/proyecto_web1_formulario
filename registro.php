@@ -15,12 +15,13 @@
     <style type="text/css">
      
 .form_tabla {
-margin: 40px auto;
-padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1000px;
   align-items: center;
   align-items: center;
+
      }
     
 
@@ -133,19 +134,41 @@ padding: 20px;
     </div>
 
 
+    <div class="box">
+
+<form class="col s12 z-depth-5 white" action="borrar.php" method="POST">
+    <table>
+      <tr>
+        <td>
+        <div class="input-field col s6">
+                            <i class="black-text material-icons prefix">delete</i>
+                            <input id="icon_prefix" type="number" class="validate" required name="id_borrar">
+                            <label class="grey-text text-darken-4" for="icon_prefix">Deseas borrar un registo? Escribe su ID</label>
+        </div>                   
+        </td>
+      </tr>
+    </table>
+    <button class="btn waves-effect waves-light red darken-4 z-depth-3" type="submit" name="action">Eliminar
+                <i class="material-icons right">delete</i>
+            </button>
+
+</form>
+</div>
 
 
 
 
 
 
-    <script>
+
+
+    <!-- <script>
         window.onpageshow = function (event) {
             if (event.persisted) {
                 window.location.reload();
             }
         };
-    </script>
+    </script> -->
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
@@ -197,7 +220,9 @@ if(!$connection)
         {
         // echo "<h4>Tabla seleccionada:</h4>" ;
         }
-        
+        if (!empty($_POST['nombre']) && !empty($_POST['ap_paterno']) && !empty($_POST['ap_materno']) && !empty($_POST['email'])
+    && !empty($_POST['celular']) ) {
+
         $instruccion_SQL = "INSERT INTO formulario 
         (nombre,ap_p,ap_m,email,celular)
             VALUES(
@@ -209,8 +234,11 @@ if(!$connection)
                            
                             
         $resultado = mysqli_query($connection,$instruccion_SQL);
-
         
+        } else {
+        // Mostrar mensaje de error si algún campo obligatorio está vacío
+        echo "Por favor, rellena todos los campos obligatorios";
+    }
         $consulta = "SELECT * FROM formulario";
         
 $result = mysqli_query($connection,$consulta);
@@ -219,10 +247,10 @@ if(!$result)
 {
     echo "No se ha podido realizar la consulta";
 }
-echo "<table class='form_tabla highlight'>";
+echo "<table class='form_tabla highlight white-text blue-grey darken-1 z-depth-5'>";
 echo "<thead>";
 echo "<tr>";
-echo "<th>>id</th>";
+echo "<th>ID</th>";
 echo "<th>Nombre</th>";
 echo "<th>Apellido Paterno</th>";
 echo "<th>Apellido Materno</th>";
@@ -246,8 +274,25 @@ while ($colum = mysqli_fetch_array($result))
 echo "</tbody>";
 echo "</table>";
 
-mysqli_close( $connection );
+
+
+ mysqli_close( $connection );
    echo'<a href="index.html"> Volver Atrás</a>';
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
+
+

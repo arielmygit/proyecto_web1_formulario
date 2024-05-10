@@ -38,6 +38,12 @@ overflow: hidden;
   max-width: auto;
   height: auto;
 }
+.boton_new{
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  
+}
 
 
 
