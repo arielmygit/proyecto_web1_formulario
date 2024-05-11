@@ -183,9 +183,9 @@
 <?php
 error_reporting(0);
 
-$user = "root";
-$pass = "";
-$host = "localhost";
+$user = "if0_36524981";
+$pass = "AjLQxTagqSL";
+$host = "sql313.infinityfree.com";
 
 
 $connection = mysqli_connect($host, $user, $pass);
@@ -209,7 +209,7 @@ if(!$connection)
             // echo "<b><h4>Hemos conectado al servidor</h4></b>" ;
         }
        
-        $datab = "prueba1";
+        $datab = "if0_36524981_db_proyecto";
         
         $db = mysqli_select_db($connection,$datab);
 
