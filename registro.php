@@ -181,6 +181,7 @@
 
 
 <?php
+error_reporting(0);
 
 $user = "root";
 $pass = "";
@@ -237,7 +238,7 @@ if(!$connection)
         
         } else {
         // Mostrar mensaje de error si algún campo obligatorio está vacío
-        echo "Por favor, rellena todos los campos obligatorios";
+        // echo "Por favor, rellena todos los campos obligatorios";
     }
         $consulta = "SELECT * FROM formulario";
         

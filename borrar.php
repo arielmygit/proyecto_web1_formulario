@@ -63,8 +63,8 @@
     </div>
     <br><br>
     <div class="center">
-    <a href="index.html">
-    <button class="btn waves-effect waves-light btn-large blue darken-4 z-depth-3 " type="" name="action">Crear un nuevo registro
+    <a href="registro.php">
+    <button class="btn waves-effect waves-light btn-large blue darken-4 z-depth-3 " type="" name="action">Crear/Borrar registro
                 <i class="material-icons right">add</i>
             </button>
     </a>
